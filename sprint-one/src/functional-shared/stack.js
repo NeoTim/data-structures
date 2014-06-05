@@ -5,7 +5,7 @@ var makeStack = function() {
   someInstance._storage = {};
   someInstance._size = 0;
   extend(someInstance, stackMethods);
-  
+
   return someInstance;
 };
 
