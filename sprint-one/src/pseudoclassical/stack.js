@@ -1,18 +1,9 @@
 var Stack = function() {
   // Hey! Rewrite in the new style. Your code will wind up looking very similar,
-  // but try not not reference your old code in writing the new style.
-   //var someInstance = new Stack({}, 0);
+  // but try not not reference your old code in writing the new style.  
   this._storage = {};
   this._size = 0;
-  //return someInstance;
-
 };
-
-
-/*var Stack = function(storage, size){
-  this.storage = storage;
-  this.stackSize = size;
-};*/
 
 Stack.prototype.push = function(value){
   this._storage[this._size] = value;
@@ -21,12 +12,12 @@ Stack.prototype.push = function(value){
 
 Stack.prototype.pop = function(){
   var result;
-  if(this._size > 0){
+  if(this._size){
     this._size --;
     result = this._storage[this._size];
     delete this._storage[this._size];
-    return result;
   }
+return result;
 };
 
 Stack.prototype.size = function(){
