@@ -9,26 +9,8 @@ var makeQueue = function() {
   return instance;
 };
 
-
-var queueMethods = {}
-
-queueMethods.enqueue = function( value ){
-	this._storage[this._back] = value;
-	this._back ++;
-};
-
-queueMethods.dequeue = function( ){
-	var result; 
-	if(this._back - this._front){
-		result = this._storage[this._front];
-		delete this._storage[this._front];
-		this._front ++;
-		return result;
-	}
-	return 0;
-};
-
-queueMethods.size = function( ){
-	return this._back - this._front;
-};
+var queueMethods     = {}
+queueMethods.enqueue = function(value) {};
+queueMethods.dequeue = function() {};
+queueMethods.size    = function() {};
 
